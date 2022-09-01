@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-Getting stated with shell. Learning shell basics
+Creating user/group related scripts
