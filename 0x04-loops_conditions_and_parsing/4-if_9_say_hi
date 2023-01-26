@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-# but displays hi on 9th iteration
+# This script is displaying "Best School" 10 times but displays hi on 9th iteration
 for i in {1..10}
 do
 	if [ $i -eq "9" ]
