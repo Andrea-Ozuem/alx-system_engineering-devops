@@ -2,5 +2,6 @@
 # configures a new Ubuntu machine to return 
 apt -y update
 apt -y install nginx
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
 service nginx start
