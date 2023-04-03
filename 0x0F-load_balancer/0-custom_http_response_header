@@ -6,5 +6,6 @@ echo "Hello World!" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 command="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
 error="\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;\n\t}"
-cmd="\n\t add_header X-Served-By $HOSTNAME"
+cmd="\n\t add_header X-Served-By $HOSTNAME;"
 sed -i "s/server_name _;/$command$cmd$error/" /etc/nginx/sites-available/default
+service nginx start
