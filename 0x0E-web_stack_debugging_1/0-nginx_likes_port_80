@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Debug Ubuntu container's Nginx installation
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+sed -i "s/server {/server {\n\tlisten 8080 default_server;\n\tlisten [::]:8080 default_server ipv6only=on;/" >> /etc/nginx/sites-enabled/default
+service nginx restart
