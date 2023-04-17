@@ -1,0 +1,24 @@
+ki va
+voam
+nvoa
+mvoaf
+fmla
+mba
+mbao
+mlba
+mbap
+
+*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT 80
+
+n*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT 80
+
+n*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT 80
+
+mlbva
+mlv

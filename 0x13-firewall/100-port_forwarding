@@ -1,0 +1,4 @@
+ufw allow 8080
+sed -i '10i\\n*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT 80\nCOMMIT\n' /etc/ufw/before.rules
+ufw enable
+servie ufw restart
