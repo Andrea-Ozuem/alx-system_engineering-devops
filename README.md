@@ -1,1 +1,1 @@
-Creating user/group related scripts
+MySQL & MySQL high availablity and redundacy
