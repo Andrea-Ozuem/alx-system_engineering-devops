@@ -19,7 +19,7 @@ if __name__ == "__main__":
     name = res[0].get('user').get('name')
     complete = [task.get('title') for task in res if task.get('completed')
                 is True]
-    print('Employee {} is done with tasks {}/{}:'.format(name, len(complete),
+    print('Employee {} is done with tasks ({}/{}):'.format(name, len(complete),
           len(res)))
     for task in complete:
         print('\t {}'.format(task))
