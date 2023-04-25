@@ -2,6 +2,10 @@
 
 '''using this REST API, for a given employee ID, returns information about
 his/her TODO list progress
+
+API: https://jsonplaceholder.typicode.com/todos?userId=2&_expand=user
+
+prints the todos associated with user
 '''
 
 import requests
