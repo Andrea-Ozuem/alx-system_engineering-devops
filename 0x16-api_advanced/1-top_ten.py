@@ -8,11 +8,10 @@ import requests
 
 def top_ten(subreddit):
     """ Queries to Reddit API """
-    limit = 10
-    url = "https://www.reddit.com/r/{}/top.json?limit={}".format(subreddit,
-                                                                 limit)
+    limit = {'limit': 10}
+    url = "https://www.reddit.com/r/{}/top.json".format(subreddit)
     res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'},
-                       allow_redirects=False)
+                       allow_redirects=False, params=limit)
     if res.status_code != 200:
         print('None')
         return
