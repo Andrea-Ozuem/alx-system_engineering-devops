@@ -1,3 +1,4 @@
+#Serve a page with Nginx using the application's api, etc
 server {
         listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
@@ -13,7 +14,6 @@ server {
         }
 
         location /api/ {
-                include proxy_params;
                 proxy_pass http://127.0.0.1:5002;
         }
 }
